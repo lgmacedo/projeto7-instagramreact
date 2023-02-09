@@ -1,24 +1,37 @@
 import Story from "./Story";
 
 export default function Stories() {
+    let stories = [
+        {
+            storyUser: "9gag", storyPic: "./assets/img/9gag.svg"
+        },
+        {
+            storyUser: "meowed", storyPic: "./assets/img/meowed.svg"
+        },
+        {   
+            storyUser: "barked", storyPic: "./assets/img/barked.svg"
+        },
+        {   
+            storyUser: "nathanwpylestrangeplanet", storyPic: "./assets/img/nathanwpylestrangeplanet.svg"
+        },
+        {   
+            storyUser: "wawawicomics", storyPic: "./assets/img/wawawicomics.svg"
+        },
+        {   
+            storyUser: "respondeai", storyPic: "./assets/img/respondeai.svg"
+        },
+        {   
+            storyUser: "filomoderna", storyPic: "./assets/img/filomoderna.svg"
+        },
+        {   
+            storyUser: "memeriagourmet", storyPic: "./assets/img/memeriagourmet.svg"
+        }
+    ]
     return (
         <div class="stories">
-            <Story storyUser="9gag" storyPic="./assets/img/9gag.svg" />
-
-            <Story storyUser="meowed" storyPic="./assets/img/meowed.svg" />
-
-            <Story storyUser="barked" storyPic="./assets/img/barked.svg" />
-
-            <Story storyUser="nathanwpylestrangeplanet" storyPic="./assets/img/nathanwpylestrangeplanet.svg" />
-
-            <Story storyUser="wawawicomics" storyPic="./assets/img/wawawicomics.svg" />
-
-            <Story storyUser="respondeai" storyPic="./assets/img/respondeai.svg" />
-
-            <Story storyUser="filomoderna" storyPic="./assets/img/filomoderna.svg" />
-
-            <Story storyUser="memeriagourmet" storyPic="./assets/img/memeriagourmet.svg" />
-
+            {stories.map(story=>
+                <Story storyUser={story.storyUser} storyPic={story.storyPic} />
+            )}
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>

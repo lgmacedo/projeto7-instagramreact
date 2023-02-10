@@ -19,7 +19,7 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.postImg} alt={imageDescription} data-test="post-image" onClick={() => {
+                <img src={props.postImg} alt={imageDescription} data-test="post-image" onDoubleClick={() => {
                     if (likedPost === "heart-outline") {
                         setLikedPost("heart");
                         setLikedColor("vermelho");

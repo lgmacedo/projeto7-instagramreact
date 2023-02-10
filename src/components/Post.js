@@ -7,7 +7,7 @@ export default function Post(props) {
     const [likedColor, setLikedColor] = useState("");
     const [likedNumber, setLikedNumber] = useState(props.likedNumber);
     return (
-        <div class="post">
+        <div class="post" data-test="post">
             <div class="topo">
                 <div class="usuario">
                     <img src={props.postUserPic} alt={props.postUser} />
@@ -19,7 +19,7 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.postImg} alt={imageDescription} onClick={() => {
+                <img src={props.postImg} alt={imageDescription} data-test="post-image" onClick={() => {
                     if (likedPost === "heart-outline") {
                         setLikedPost("heart");
                         setLikedColor("vermelho");
@@ -31,7 +31,7 @@ export default function Post(props) {
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name={likedPost} class={likedColor} onClick={() => {
+                        <ion-icon name={likedPost} class={likedColor} data-test="like-post" onClick={() => {
                             if (likedPost === "heart-outline") {
                                 setLikedPost("heart");
                                 setLikedColor("vermelho");
@@ -46,7 +46,7 @@ export default function Post(props) {
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name={salvo} onClick={() => {
+                        <ion-icon name={salvo} data-test="save-post" onClick={() => {
                             if (salvo === "bookmark-outline") {
                                 setSalvo("bookmark");
                             } else {
@@ -59,7 +59,7 @@ export default function Post(props) {
                 <div class="curtidas">
                     <img src={props.likedByPic} alt={props.likedBy} />
                     <div class="texto">
-                        Curtido por <strong>{props.likedBy}</strong> e <strong>outras {likedNumber} pessoas</strong>
+                        Curtido por <strong>{props.likedBy}</strong> e <strong>outras <span data-test="likes-number">{likedNumber}</span> pessoas</strong>
                     </div>
                 </div>
             </div>

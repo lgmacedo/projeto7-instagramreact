@@ -8,7 +8,7 @@ export default function Posts() {
             postImg: "./assets/img/post-ronaldinho.jpeg",
             likedBy: "ronaldinho",
             likedByPic: "./assets/img/user-ronaldinho.jpg",
-            likedNumber: "1.101.523"
+            likedNumber: 13922013
         },
         {
             postUser: "meowed",
@@ -16,7 +16,7 @@ export default function Posts() {
             postImg: "./assets/img/gato-telefone.svg",
             likedBy: "respondeai",
             likedByPic: "./assets/img/respondeai.svg",
-            likedNumber: "101.523",
+            likedNumber: 101523
         },
         {
             postUser: "barked",
@@ -24,7 +24,7 @@ export default function Posts() {
             postImg: "./assets/img/dog.svg",
             likedBy: "adorable_animals",
             likedByPic: "./assets/img/adorable_animals.svg",
-            likedNumber: "99.159",
+            likedNumber: 99159
         }
 
     ];

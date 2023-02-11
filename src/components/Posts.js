@@ -29,9 +29,11 @@ export default function Posts() {
 
     ];
     return (
-        <div class="posts">
+        <div className="posts">
             {posts.map(post => (
-                <Post postUser={post.postUser}
+                <Post 
+                    key={post.postUser}
+                    postUser={post.postUser}
                     postUserPic={post.postUserPic}
                     postImg={post.postImg}
                     likedBy={post.likedBy}

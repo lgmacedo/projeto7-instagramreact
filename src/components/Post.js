@@ -7,18 +7,18 @@ export default function Post(props) {
     const [likedColor, setLikedColor] = useState("");
     const [likedNumber, setLikedNumber] = useState(props.likedNumber);
     return (
-        <div class="post" data-test="post">
-            <div class="topo">
-                <div class="usuario">
+        <div className="post" data-test="post">
+            <div className="topo">
+                <div className="usuario">
                     <img src={props.postUserPic} alt={props.postUser} />
                     {props.postUser}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
 
-            <div class="conteudo">
+            <div className="conteudo">
                 <img src={props.postImg} alt={imageDescription} data-test="post-image" onDoubleClick={() => {
                     if (likedPost === "heart-outline") {
                         setLikedPost("heart");
@@ -28,8 +28,8 @@ export default function Post(props) {
                 }} />
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                         <ion-icon name={likedPost} class={likedColor} data-test="like-post" onClick={() => {
                             if (likedPost === "heart-outline") {
@@ -56,9 +56,9 @@ export default function Post(props) {
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={props.likedByPic} alt={props.likedBy} />
-                    <div class="texto">
+                    <div className="texto">
                         Curtido por <strong>{props.likedBy}</strong> e <strong>outras <span data-test="likes-number">{likedNumber}</span> pessoas</strong>
                     </div>
                 </div>

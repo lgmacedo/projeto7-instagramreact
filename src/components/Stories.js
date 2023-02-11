@@ -28,11 +28,11 @@ export default function Stories() {
         }
     ]
     return (
-        <div class="stories">
+        <div className="stories">
             {stories.map(story=>
-                <Story storyUser={story.storyUser} storyPic={story.storyPic} />
+                <Story key={story.storyUser} storyUser={story.storyUser} storyPic={story.storyPic} />
             )}
-            <div class="setinha">
+            <div className="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>
